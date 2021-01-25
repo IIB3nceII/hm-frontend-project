@@ -17,6 +17,11 @@
   flex-direction: column;
   align-items: center;
   width: 80%;
+  margin-top: 5vw;
+}
+
+.textDown{
+  margin-top: 20vw;
 }
 
 .adPic_textContainer > h1 {

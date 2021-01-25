@@ -1,0 +1,144 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 550px;
+  background-color: #eaeaea;
+}
+
+.footer_container {
+  width: 50vw;
+  margin-top: 10vh;
+}
+
+.footer_containerUpper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer_containerColumn {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin-right: 3vw;
+}
+
+.footer_containerColumn:last-child {
+  margin-right: 0;
+}
+
+.footer_containerColumn > h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 1.5vw;
+}
+
+.footer_containerColumn > p {
+  min-width: 150px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 1vw;
+}
+
+.footer_containerColumn > p:hover {
+  cursor: pointer;
+}
+
+.normal > h3 {
+  text-transform: uppercase;
+}
+
+.become {
+  width: 190px;
+}
+
+.become > h3 {
+  font-size: 12px;
+}
+
+.become_readMore {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.become_readMore:hover {
+  color: red;
+}
+
+.become_readMore > p {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 0.5vw;
+}
+
+.footer_containerLower {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.lower_icons {
+  display: flex;
+  justify-content: space-between;
+  width: 16vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.lower_icons > .MuiSvgIcon-root {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.lower_terms {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin-bottom: 1vh;
+  text-align: center;
+  align-items: center;
+}
+
+.lower_terms > p {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.lower_terms > span {
+  width: 90px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.lower_terms > span:hover {
+  border-bottom: 1px solid black;
+}
+
+.footer_logoAndLang {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer_logoAndLang > img {
+  height: 30px;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  cursor: pointer;
+}
+
+.footer_logoAndLang > p {
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.footer_logoAndLang > p:hover{
+    border-bottom: 1px solid black;
+}

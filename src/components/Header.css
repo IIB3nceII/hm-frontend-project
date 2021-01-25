@@ -32,10 +32,12 @@
 
 .header_left > p {
   margin-right: 20px;
+  cursor: pointer;
 }
 
-.heder_dotmenu {
+.header_dotmenu {
   z-index: 100;
+  cursor: pointer;
 }
 
 .header_leftDots > .MuiSvgIcon-root {
@@ -51,6 +53,7 @@
   font-weight: 100;
   margin-left: 10px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .header_leftMore > p {
@@ -76,6 +79,7 @@
 
 .header_logo > img {
   width: 70px;
+  cursor: pointer;
 }
 
 .header_centerMenu {
@@ -88,6 +92,7 @@
   font-size: 16px;
   font-weight: 500;
   margin-right: 1.5vw;
+  cursor: pointer;
 }
 
 .header_centerMenu > p:last-child {
@@ -116,6 +121,7 @@
 .header_rightNav > div {
   display: flex;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 .header_rightNav > div > .MuiSvgIcon-root {
@@ -137,6 +143,7 @@
 .header_rightSearch > .MuiSvgIcon-root {
   font-size: 30px !important;
   font-weight: 100 !important;
+  cursor: pointer;
 }
 
 .header_rightSearch > input {

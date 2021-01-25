@@ -10,20 +10,14 @@ import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 function Header() {
   const [menuvisibility, setmenuvisibility] = useState(false);
 
-  const showMenuHandler = (e) => {
-    e.preventDefault();
-
-    setmenuvisibility(!menuvisibility);
-  };
-
   return (
     <div className="header">
       <div className="header_container">
         <div className="header_left">
           <p>Customer Service</p>
           <p>Store Locator</p>
-          <div className="heder_dotmenu">
-            <div className="header_leftDots" onClick={showMenuHandler}>
+          <div className="header_dotmenu">
+            <div className="header_leftDots" onClick={()=>{setmenuvisibility(!menuvisibility)}}>
               <MoreHorizIcon />
             </div>
             {menuvisibility ? (

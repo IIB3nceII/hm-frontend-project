@@ -3,6 +3,8 @@ import AdCard from "../Ads/AdCard";
 import AdPic from "../Ads/AdPic";
 import "./Home.css";
 import firstAdPic from "../../assets/adPic01.jpeg";
+import Magazine from "./Magazine";
+import Footer from "../Footer";
 
 function Home() {
   return (
@@ -45,9 +47,11 @@ function Home() {
           text="Treat yourself with new sporty styles"
           justOne={true}
           bgImg={firstAdPic}
-          textTop={false}
+          textTop={true}
         />
       </div>
+      <Magazine />
+      <Footer />
     </div>
   );
 }
