@@ -3,7 +3,7 @@ import "./AdPic.css";
 
 function AdPic({ title, text, justOne, bgImg, textTop }) {
   return (
-    <div className="adPic" style={{ background: `url(${bgImg})` }}>
+    <div className="adPic" style={{ background: `url(${bgImg})`}}>
       <div className={`adPic_textContainer ${!textTop &&"textDown"}`} >
         <h1>{title}</h1>
         <p>{text}</p>

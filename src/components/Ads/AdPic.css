@@ -7,9 +7,9 @@
   color: white;
   margin-top: 10px;
   margin-bottom: 10px;
-  background-repeat: no-repeat;
-  background-size: auto;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .adPic_textContainer {

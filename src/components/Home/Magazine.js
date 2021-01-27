@@ -1,7 +1,9 @@
 import React from "react";
 import "./Magazine.css";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
-import firstMagazinePic from "../../assets/adPic01.jpeg";
+import firstMagazinePic from "../../assets/magazineAd01.jpg";
+import secondMagazinePic from "../../assets/magazineAd02.jpg";
+import thirdMagazinePic from "../../assets/magazineAd03.jpg";
 
 function Magazine() {
   return (
@@ -23,7 +25,7 @@ function Magazine() {
           </div>
 
           <div className="grid_item">
-            <img src={firstMagazinePic} alt="" />
+            <img src={secondMagazinePic} alt="" />
             <div className="grid_itemText">
               <h3>Inside H&M</h3>
               <p>"Gratitude is a must"</p>
@@ -35,7 +37,7 @@ function Magazine() {
           </div>
 
           <div className="grid_item">
-            <img src={firstMagazinePic} alt="" />
+            <img src={thirdMagazinePic} alt="" />
             <div className="grid_itemText">
               <h3>Inside H&M</h3>
               <p>Consicous Exclusive A/W20</p>
