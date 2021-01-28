@@ -175,21 +175,6 @@ function Header() {
                 >
                   {item.name}
                 </p>
-                {dropDownVisibility ? (
-                  <div className="header_centerMenuDrop">
-                    {item.dropdownMenuItems.map((opt) => (
-                      <div className="header_centerMenuDropOpts">
-                        <h3>{opt.name}</h3>
-
-                        {opt.options.map((n) => (
-                          <Link to={n.endp}>
-                            <p className="opt_name">{n.name}</p>
-                          </Link>
-                        ))}
-                      </div>
-                    ))}
-                  </div>
-                ) : null}
               </div>
             ))}
           </div>
@@ -216,6 +201,27 @@ function Header() {
           </div>
         </div>
       </div>
+
+      {dropDownVisibility ? (
+        <div className="dropdown">
+          <div className="header_centerMenuDrop">
+            {menuOptions.map((item) => (
+              <div>
+                {item.dropdownMenuItems.map((opt) => (
+                  <div className="header_centerMenuDropOpts">
+                    <h3>{opt.name}</h3>
+                    {opt.options.map((n) => (
+                      <Link to={n.endp}>
+                        <p className="opt_name">{n.name}</p>
+                      </Link>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
