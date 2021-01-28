@@ -3,6 +3,8 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home/Home";
+import ViewAll from "./components/ViewAll/ViewAll";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
         <Switch>
           <Route path="/women/newarrivals/viewall">
             <Header />
+            <ViewAll />
+            <Footer/>
           </Route>
 
           <Route path="/">
