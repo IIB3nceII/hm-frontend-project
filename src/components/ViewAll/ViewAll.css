@@ -40,12 +40,29 @@
 
 .option{
     display: flex;
+    flex-direction: column;
     margin-right: 20px;
     cursor: pointer;
 }
 
 .option:last-child{
     margin: 0;    
+}
+
+.option_title{
+    display: flex;
+}
+
+.option_list{
+    width: 100%;
+    background: white;
+    z-index: 100;
+}
+
+.option_list>p{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5px;
 }
 
 .viewAll_data{
@@ -63,6 +80,14 @@
 
 .viewAll_items{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     max-width: 100%;
+}
+
+.viewAll_itemsRow{
+    display: flex;
+    z-index: 1;
+    margin-left: 5px;
+    margin-right: 5px;
 }

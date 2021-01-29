@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AdCard from "../Ads/AdCard";
 import Sidebar from "../Sidebar";
 import "./ViewAll.css";
@@ -9,6 +9,8 @@ import DashboardOutlinedIcon from "@material-ui/icons/DashboardOutlined";
 import Item from "../Item";
 
 function ViewAll() {
+  const [state, setstate] = useState(false);
+
   return (
     <div className="viewAll">
       <Sidebar />
@@ -24,24 +26,65 @@ function ViewAll() {
           <div className="viewAll_optionContainer">
             <div className="viewAll_options">
               <div className="option">
-                <p>Sort by</p>
-                <ExpandMoreIcon />
+                <div className="option_title" onClick={() => setstate(!state)}>
+                  <p>Sort by</p>
+                  <ExpandMoreIcon />
+                </div>
+                {state ? (
+                  <div className="option_list">
+                    <p>Name</p>
+                    <p>Price</p>
+                  </div>
+                ) : null}
               </div>
               <div className="option">
-                <p>Size</p>
-                <ExpandMoreIcon />
+                <div className="option_title" onClick={() => setstate(!state)}>
+                  <p>Size</p>
+                  <ExpandMoreIcon />
+                </div>
+                {state ? (
+                  <div className="option_list">
+                    <p>small</p>
+                    <p>normal</p>
+                    <p>large</p>
+                  </div>
+                ) : null}
               </div>
               <div className="option">
-                <p>Colour</p>
-                <ExpandMoreIcon />
+                <div className="option_title" onClick={() => setstate(!state)}>
+                  <p>Colour</p>
+                  <ExpandMoreIcon />
+                </div>
+                {state ? (
+                  <div className="option_list">
+                    <p>black</p>
+                    <p>white</p>
+                  </div>
+                ) : null}
               </div>
               <div className="option">
-                <p>Pattern</p>
-                <ExpandMoreIcon />
+                <div className="option_title" onClick={() => setstate(!state)}>
+                  <p>Pattern</p>
+                  <ExpandMoreIcon />
+                </div>
+                {state ? (
+                  <div className="option_list">
+                    <p>no pattern</p>
+                    <p>pattern</p>
+                  </div>
+                ) : null}
               </div>
               <div className="option">
-                <p>Product Type</p>
-                <ExpandMoreIcon />
+                <div className="option_title" onClick={() => setstate(!state)}>
+                  <p>Product Type</p>
+                  <ExpandMoreIcon />
+                </div>
+                {state ? (
+                  <div className="option_list">
+                    <p>T-shirt</p>
+                    <p>Jeans</p>
+                  </div>
+                ) : null}
               </div>
               <div className="option">
                 <TuneIcon />
@@ -60,17 +103,51 @@ function ViewAll() {
         </div>
 
         <div className="viewAll_items">
-          <Item title="Side-stripe Joggers" price="34.99" type="New Arrival" />
+          <div className="viewAll_itemsRow">
+            <Item
+              imgSrc=""
+              title="Side-stripe Joggers"
+              price="34.99"
+              type="New Arrival"
+              size="small"
+            />
 
-          <Item title="Side-stripe Joggers" price="34.99" type="New Arrival" />
+            <Item
+              title="Side-stripe Joggers"
+              price="34.99"
+              type="New Arrival"
+              size="small"
+            />
 
-          <Item title="Side-stripe Joggers" price="34.99" type="New Arrival" />
+            <Item
+              title="Side-stripe Joggers"
+              price="34.99"
+              type="New Arrival"
+              size="small"
+            />
 
-          <Item title="Side-stripe Joggers" price="34.99" type="New Arrival" />
+            <Item
+              title="Side-stripe Joggers"
+              price="34.99"
+              type="New Arrival"
+              size="large"
+            />
+          </div>
+          <div className="viewAll_itemsRow">
+            <Item
+              title="Side-stripe Joggers"
+              price="34.99"
+              type="New Arrival"
+              size="small"
+            />
 
-          <Item title="Side-stripe Joggers" price="34.99" type="New Arrival" />
-
-          <Item title="Side-stripe Joggers" price="34.99" type="New Arrival" />
+            <Item
+              title="Side-stripe Joggers"
+              price="34.99"
+              type="New Arrival"
+              size="large"
+            />
+          </div>
         </div>
       </div>
     </div>
