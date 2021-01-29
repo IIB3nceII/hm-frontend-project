@@ -7,11 +7,14 @@ import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import LocalMallIcon from "@material-ui/icons/LocalMall";
 import SearchIcon from "@material-ui/icons/Search";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import { useStateValue } from "../StateProvider";
 
 function Header() {
   const [menuvisibility, setmenuvisibility] = useState(false);
 
   const [dropDownVisibility, setDropDownVisibility] = useState(false);
+
+  const [{basket},dispatch]=useStateValue();
 
   const menuOptions = [
     {
@@ -192,7 +195,7 @@ function Header() {
             </div>
             <div className="header_rightNav_basket">
               <LocalMallIcon />
-              <p>Shopping bag(0)</p>
+              <p>Shopping bag({basket?.length})</p>
             </div>
           </div>
           <div className="header_rightSearch">
