@@ -45,13 +45,13 @@ const reducer = (state, action) => {
       };
 
     case "REMOVE_FROM_FAV":
-      const index = state.favList.findIndex(
+      const itemIndex = state.favList.findIndex(
         (favItem) => favItem.id === action.id
       );
       let newList = [...state.favList];
 
-      if (index >= 0) {
-        newList.splice(index, 1);
+      if (itemIndex >= 0) {
+        newList.splice(itemIndex, 1);
       } else {
         console.warn(
           `Cant remove product (id: ${action.id}) as its not in the list!`
