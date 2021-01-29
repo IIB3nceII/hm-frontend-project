@@ -14,7 +14,7 @@ function Header() {
 
   const [dropDownVisibility, setDropDownVisibility] = useState(false);
 
-  const [{basket},dispatch]=useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
 
   const menuOptions = [
     {
@@ -189,10 +189,14 @@ function Header() {
               <PersonOutlineIcon />
               <p>Sign in</p>
             </div>
-            <div className="header_rightNav_signIn">
-              <FavoriteBorderIcon />
-              <p>Favourites</p>
-            </div>
+
+            <Link to="/favourites">
+              <div className="header_rightNav_favs">
+                <FavoriteBorderIcon />
+                <p>Favourites</p>
+              </div>
+            </Link>
+
             <div className="header_rightNav_basket">
               <LocalMallIcon />
               <p>Shopping bag({basket?.length})</p>
