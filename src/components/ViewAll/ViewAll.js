@@ -87,8 +87,10 @@ function ViewAll() {
                 ) : null}
               </div>
               <div className="option">
-                <TuneIcon />
-                <p>All filters</p>
+                <div className="option_title" onClick={() => setstate(!state)}>
+                  <TuneIcon />
+                  <p>All filters</p>
+                </div>
               </div>
             </div>
 
