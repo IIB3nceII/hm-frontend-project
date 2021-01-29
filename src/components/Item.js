@@ -1,15 +1,31 @@
 import React from "react";
 import "./Item.css";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import { useStateValue } from "../StateProvider";
 
 function Item({ imgSrc, title, price, colors, type }) {
+  const[{favList},dispatch]=useStateValue();
+
+  const addtoFav = () => {
+    dispatch({
+      type: "ADD_TO_FAV",
+      Item:{
+        imgSrc: imgSrc,
+        title:title,
+        price:price,
+        colors:colors,
+        type:type
+      }
+    })
+  };
+
   return (
     <div className="item">
       <div className="item_img">
         <img src={imgSrc} alt="item image" />
-        <div className="item_favIcon">
-        <FavoriteBorderIcon />
-      </div>
+        <div className="item_favIcon" onClick={addtoFav}>
+          <FavoriteBorderIcon />
+        </div>
       </div>
       <div className="item_text">
         <h3>{title}</h3>
